@@ -5,8 +5,9 @@ title: Home
 
 <section class="hero">
   <p class="eyebrow">Personal Blog</p>
-  <h1>Research notes, technical writing, and personal reflections.</h1>
-  <p class="lead">A place for paper notes, project records, coding experience, and essays.</p>
+  <h1>Hello, I am Liu Zhi.</h1>
+  <p class="lead">I am a PhD student at Xiangya Hospital, Central South University, focusing on single-cell omics, GWAS, and integrative computational approaches to biomedical research.</p>
+  <p class="lead">Email: <a href="mailto:liuzhi@csu.edu.cn">liuzhi@csu.edu.cn</a></p>
 </section>
 
 <section class="post-list">
