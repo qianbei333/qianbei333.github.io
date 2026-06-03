@@ -133,10 +133,64 @@ h2 {
   height: auto;
 }
 
+.pdf-gate {
+  margin: 24px 0 36px;
+}
+
+.pdf-gate-form {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.pdf-gate-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.pdf-gate-row {
+  display: flex;
+  gap: 10px;
+}
+
+.pdf-gate-row input {
+  min-width: 0;
+  flex: 1;
+  padding: 11px 12px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.pdf-gate-row button {
+  padding: 11px 16px;
+  color: #fff;
+  background: var(--accent-strong);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.pdf-gate-message {
+  min-height: 1.5em;
+  margin: 10px 0 0;
+  color: #9b2c2c;
+}
+
+.pdf-actions {
+  margin-bottom: 14px;
+}
+
 .pdf-frame {
   width: 100%;
   height: min(78vh, 760px);
-  margin: 24px 0 36px;
+  margin: 0 0 36px;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -182,5 +236,9 @@ h2 {
 
   .page {
     padding: 36px 0;
+  }
+
+  .pdf-gate-row {
+    flex-direction: column;
   }
 }
