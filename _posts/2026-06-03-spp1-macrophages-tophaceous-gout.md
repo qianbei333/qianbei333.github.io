@@ -71,137 +71,131 @@ categories: gout single-cell spatial-transcriptomics macrophage
 
 ## References
 
-This study note summarizes the mechanistic background of gout and the emerging single-cell and spatial transcriptomic framework for understanding the gouty tophus microenvironment. The discussion is organized around the following references:
+This reading note is based primarily on the full text of the following article:
 
-1. Dalbeth N, et al. Gout. *Lancet*. 2021;397:1843-1855.
-2. Leask MP, et al. The pathogenesis of gout: molecular insights from genetic, epigenomic and transcriptomic studies. *Nature Reviews Rheumatology*. 2024;20:510-523.
-3. FitzGerald JD, et al. 2020 American College of Rheumatology Guideline for the Management of Gout. *Arthritis Care & Research*. 2020;72:744-760.
-4. Deconstruction of tophi and synovium defines SPP1+ macrophages involved in extracellular matrix remodelling in gout. *Annals of the Rheumatic Diseases*. 2025. PMID: 41107120. DOI: [10.1016/j.ard.2025.09.003](https://doi.org/10.1016/j.ard.2025.09.003).
+Xu H, Liu Z, Zhou X, Ji X, Liu X, Zhu X, Lu L, Dalbeth N, He R, Hua Y. **Deconstruction of tophi and synovium defines SPP1+ macrophages involved in extracellular matrix remodelling in gout.** *Annals of the Rheumatic Diseases*. 2025;84:2088-2102. DOI: [10.1016/j.ard.2025.09.003](https://doi.org/10.1016/j.ard.2025.09.003).
 
-## 1. Central Question: Gout Is More Than Hyperuricaemia
+## Background and Rationale
 
-The conventional explanation of gout begins with hyperuricaemia. When serum urate exceeds its solubility threshold, monosodium urate crystals, or MSU crystals, can deposit in local joint tissues and trigger acute inflammation. This framework explains acute gout flares well, but it is less sufficient for explaining chronic tophus formation, local joint destruction, fibrosis, and bone erosion.
+Gout is driven by elevated serum urate and the deposition of monosodium urate crystals in joints. The mechanisms of acute gout flares are relatively well established: MSU crystals activate innate immune responses, particularly the NLRP3 inflammasome and IL-1 beta signalling. However, the biology of tophaceous gout remains less clearly defined.
 
-The central question has therefore shifted from why urate levels rise to why specific joints develop persistent pathological microenvironments. In this broader view, gout is both a systemic metabolic disease and a local tissue-remodeling disease.
+The central gap addressed by this paper is not the initiation of an acute flare, but the formation of tophi as chronic, organised lesions. Previous histological work has shown that tophi contain a central MSU crystal core, a macrophage-rich corona zone, and an outer fibrovascular zone. This layered architecture implies that tophus formation is not only a crystal deposition event, but also a spatially organised immune-stromal remodeling process.
 
-## 2. The Classical Model: MSU Crystals Drive Acute Inflammation
+The authors therefore ask how immune cells, stromal cells, and bone-related cells are organised within tophi and how their interactions may contribute to extracellular matrix remodelling, fibrosis, osteoclast differentiation, and joint destruction.
 
-During an acute gout flare, MSU crystals are the key inflammatory trigger. After macrophages phagocytose MSU crystals, the NLRP3 inflammasome is activated. This promotes caspase-1 activation, IL-1 beta and IL-18 release, and pyroptotic cell death.
+## Study Design
 
-The acute inflammatory cascade can be summarized as:
+The study integrates single-cell RNA sequencing and spatial transcriptomics to compare synovial tissue from patients with intercritical gout without tophi and tissue from patients with tophaceous gout. After quality control, the authors analysed 44,221 cells from synovial or tophus samples.
 
-```text
-MSU crystals
-    |
-macrophage phagocytosis
-    |
-NLRP3 inflammasome activation
-    |
-caspase-1 activation
-    |
-IL-1 beta release and pyroptosis
-    |
-acute gout flare
-```
+The main experimental and analytical components include:
 
-This model emphasizes the direct interaction between crystals and innate immunity. It explains the rapid onset of acute inflammation and provides the rationale for therapies targeting IL-1 beta-related inflammatory pathways.
+1. Single-cell RNA sequencing to define immune, stromal, and bone-related cell populations across disease stages.
+2. Spatial transcriptomics to map gene expression patterns in the corona and fibrovascular zones of tophi.
+3. RCTD-based cell-type decomposition to infer the cellular composition of spatial transcriptomic spots.
+4. Pseudotime and spatial trajectory analyses to infer macrophage-to-osteoclast progression.
+5. Differential gene expression and pathway enrichment analyses to identify stage-specific transcriptional programs.
+6. Flow cytometry and immunofluorescence to validate macrophage marker coexpression and spatial localisation.
+7. Cell-cell communication analysis to identify ligand-receptor interactions between macrophages, fibroblasts, osteoblasts, osteoclasts, and T cells.
+8. Differential causal inference and Mendelian randomisation to explore regulatory networks and possible causal relationships.
 
-## 3. From Systemic Metabolism to Local Tissue Context
+This design is important because the authors do not rely on single-cell data alone. They combine cell-state discovery with spatial localisation and experimental validation, which makes the proposed mechanism more tissue-context aware.
 
-The upstream basis of gout is disrupted urate homeostasis. Urate transporter genes such as **SLC2A9**, **SLC22A12**, and **ABCG2** regulate urate reabsorption and excretion, thereby influencing the risk of hyperuricaemia. GWAS and related genetic studies provide a systemic explanation for urate burden.
+## Result 1: Tophi Contain Spatially Distinct Cellular Niches
 
-However, hyperuricaemia alone does not explain why only certain joints develop severe inflammation, recurrent flares, or chronic tophi. Recent studies increasingly suggest that the local joint microenvironment influences MSU crystal deposition, persistence, and progression toward chronic tissue damage.
+The spatial transcriptomic analysis maps cell populations across the corona and fibrovascular zones of tophi. The authors analysed 4313 spatial spots and identified distinct spot clusters across these two anatomical regions. By integrating the spatial data with single-cell profiles, they inferred the cellular composition of each spot.
 
-This conceptual transition can be organized into four levels:
+A key finding is that the corona and fibrovascular zones are not simply different histological layers; they also differ in cellular composition and inferred biological activity. Fibroblasts, mast cells, and proliferating cells were enriched in the corona zone, whereas osteoblast-related populations were more prominent in the fibrovascular zone. Spatial trajectory analysis further suggested macrophage-to-osteoclast progression, with transition markers enriched in pathways related to lysosomal activity, consistent with osteoclast differentiation.
 
-1. Cartilage and extracellular matrix components may influence MSU crystallization and inflammatory cell recruitment.
-2. Damaged joints may form permissive local niches that explain anatomical preference and recurrence.
-3. SRS imaging and synovial organoid models can visualize the spatiotemporal process of MSU crystal deposition.
-4. Single-cell and spatial transcriptomics can deconstruct the immune, stromal, and bone-related architecture of established tophi.
+This result establishes the spatial foundation of the paper: tophi are compartmentalised lesions in which immune and stromal programs are regionally organised.
 
-The logic of gout research is therefore expanding from metabolic disturbance and crystal deposition toward crystal-induced local tissue ecology.
+## Result 2: SPP1+ TGAMs Are a Tophus-Specific Macrophage Population
 
-## 4. Single-Cell and Spatial Omics: The Gouty Tophus as an Organized Lesion
+The authors next focused on macrophages because macrophages are central to both acute gout inflammation and the cellular structure of tophi. Unsupervised clustering identified multiple macrophage subclusters. Among them, M0, M6, and M9 were enriched in tophaceous gout and were classified as tophaceous gout-associated macrophages, or TGAMs. In contrast, M1, M3, and M5 were enriched in intercritical gout and were classified as intercritical gout-associated macrophages.
 
-A gouty tophus is not merely a passive aggregate of urate crystals. It is a chronic pathological structure composed of MSU crystals, immune cells, fibroblasts, vascular components, bone-lineage cells, and extracellular matrix.
+Pseudotime analysis placed intercritical gout-associated macrophages near the beginning of the trajectory and TGAMs near the endpoint, suggesting a disease-stage-associated macrophage transition. The key molecular distinction was the reciprocal pattern between **SPP1** and **FOLR2**. TGAMs were enriched for **SPP1**, whereas intercritical macrophages were enriched for **FOLR2**.
 
-Single-cell transcriptomics and spatial transcriptomics are valuable because they separate this complex lesion into cell states, signaling programs, and spatial domains. The central analytical task is not only to ask which cell types are present, but also to ask where they are located, how they interact, and which signaling axes maintain the lesion.
+The TGAM population showed high expression of **SPP1**, **MMP9**, and **CHI3L1**. These markers point to a macrophage state associated with extracellular matrix regulation, tissue remodeling, and chronic inflammation. Flow cytometry further supported the increased presence of SPP1/CHI3L1, SPP1/MMP9, and CHI3L1/MMP9 double-positive macrophage populations in tophaceous gout.
 
-## 5. SPP1+ TGAMs: A Macrophage State Linking Inflammation and Remodeling
+The main interpretation is that SPP1+ TGAMs are not merely inflammatory macrophages. They represent a tophus-associated macrophage state with matrix-remodeling and osteoclast-related potential.
 
-One of the key findings is the identification of **SPP1+ tophus-associated macrophages**, referred to as SPP1+ TGAMs. Here, the term refers to macrophages enriched in gouty tophus lesions.
+## Result 3: TGAMs Differ From Acute Flare-Associated Macrophages
 
-SPP1+ TGAMs express genes such as **SPP1**, **MMP9**, and **CHI3L1**. This profile suggests that they are not simply acute inflammatory macrophages. Instead, they resemble a chronic inflammatory and tissue-remodeling macrophage state. MMP9 points toward matrix degradation and remodeling; CHI3L1 is associated with inflammation, fibrosis, and tissue repair; SPP1 may mediate adhesion, migration, and communication between immune and stromal cells.
+To distinguish chronic tophus biology from acute flare biology, the authors compared TGAMs with macrophages from gout flare-associated synovial fluid. This comparison is conceptually important because acute gout flares and tophaceous gout are often discussed under the same disease umbrella, but the cellular programs are not identical.
 
-The significance of SPP1+ TGAMs is that they may connect MSU-induced inflammation with extracellular matrix remodeling, fibrosis, osteoclast differentiation, and structural joint damage.
+TGAMs showed upregulation of genes related to extracellular matrix remodeling, including matrix metalloproteinases and collagen-related genes such as **COL6A2** and **COL6A3**. Pathway enrichment highlighted protein digestion and absorption, ECM-receptor interaction, and related remodeling pathways.
 
-## 6. Cell-Cell Communication: The SPP1-CD44 Axis
+This indicates that TGAMs are more closely aligned with chronic tissue remodeling than with the purely acute inflammatory macrophage state. The authors also used Mendelian randomisation to support a relationship between SPP1 expression and gout-related risk, suggesting that SPP1 may not be only a marker but may also be mechanistically relevant.
 
-Compared with intercritical gout, gouty tophus lesions show markedly enhanced cell-cell communication. The **SPP1-CD44** interaction emerges as a prominent ligand-receptor axis linking SPP1+ TGAMs with fibroblasts, osteoblast-lineage cells, osteoclast-lineage cells, and regulatory T cells.
+## Result 4: Fibroblasts and Osteoblasts Shift From Inflammatory to ECM-Regulatory Programs
 
-This observation is important because it reframes macrophages as organizers of the local pathological niche rather than merely executors of inflammation. Through SPP1-CD44 signaling, macrophages may influence fibroblast activation, collagen deposition, bone remodeling, and immune regulation. This could help explain how a crystal deposition site evolves into a stable chronic tissue lesion.
+The paper then expands the analysis from macrophages to stromal and bone-related cells. Fibroblasts and osteoblasts exhibited disease-stage-specific transcriptional states. In intercritical gout, fibroblast and osteoblast subsets were more associated with inflammatory pathways. In tophaceous gout, they shifted toward extracellular matrix regulation, protein remodeling, focal adhesion, and ECM-receptor interaction pathways.
 
-## 7. Spatial Zonation: Immune-Stromal Interaction and Structural Remodeling
+The authors identified tophaceous gout-associated fibroblast states, including TGAF-1 and TGAF-2. TGAF-2 was particularly interesting because it shared transcriptional features with SPP1+ TGAMs, including expression of **SPP1**, **MMP9**, and **CD68**. CytoTRACE and pseudotime analyses suggested a close relationship between TGAMs and TGAF-2, raising the possibility of macrophage-fibroblast intermediate states.
 
-Spatial analysis further suggests that the gouty tophus contains regionally organized signaling programs. SPP1 signaling is enriched in the corona zone, whereas collagen signaling is more prominent in the fibrovascular zone.
+Immunofluorescence staining further supported this idea. Cells coexpressing S100A4, SPP1, and CD68 were enriched in the corona zone, providing spatial and protein-level evidence for a macrophage-fibroblast-associated phenotype in tophi.
 
-This can be conceptualized as two connected spatial layers:
+The biological implication is that the tophus microenvironment may promote cellular plasticity or convergence between macrophage and fibroblast-like programs, thereby linking chronic inflammation to fibrosis and matrix remodeling.
 
-```text
-corona zone
-    immune-stromal interaction
-    SPP1-CD44 signaling
-    macrophage-fibroblast and macrophage-bone-lineage crosstalk
+## Result 5: SPP1-CD44 Signalling Is Activated in the Corona Zone
 
-fibrovascular zone
-    collagen signaling
-    extracellular matrix organization
-    fibrosis and structural remodeling
-```
+Cell-cell communication analysis showed stronger and more frequent interactions in tophaceous gout than in intercritical gout. Among the inferred ligand-receptor interactions, the **SPP1-CD44** axis was prominent between TGAMs and fibroblasts or osteoblasts.
 
-This spatial pattern indicates that the gouty tophus is not a homogeneous inflammatory mass. It is a compartmentalized pathological niche: the inner region is more associated with SPP1-driven immune-stromal communication, whereas the outer region is more associated with collagen-driven structural remodeling.
+Spatial communication analysis added an important layer. In the corona zone, SPP1-related signalling was dominant, whereas in the fibrovascular zone, complement and collagen-related pathways were more prominent. In the SPP1 pathway, macrophages, fibroblasts, and osteoblasts could act as senders or receivers, suggesting a local communication network rather than a one-directional signal.
 
-## 8. Integrated Disease Model
+The genes regulated downstream of SPP1 signalling were enriched for focal adhesion, ECM-receptor interaction, and protein digestion pathways. This supports the authors' argument that SPP1-CD44 signalling may connect macrophage activation to stromal remodeling and bone-related tissue damage.
 
-The overall disease logic can be summarized as:
+## Result 6: T-Cell States Also Change During Tophus Development
+
+The authors also analysed T-cell populations. CD4+ naive T cells were more abundant in intercritical gout, whereas regulatory T cells marked by **CTLA4** and **FOXP3** were increased in tophaceous gout. Pseudotime analysis suggested a trajectory from naive CD4+ T cells toward regulatory T-cell states.
+
+Cell communication analysis further showed stronger interactions between TGAMs and regulatory T cells than between intercritical macrophages and regulatory T cells. Receptor-ligand pairs such as **PPIA-BSG** and **SPP1-CD44** were highlighted.
+
+This result suggests that tophus development is not only a macrophage-stromal process. It may also involve immune-regulatory remodeling, in which Tregs participate in the local chronic inflammatory niche.
+
+## Discussion and Mechanistic Interpretation
+
+The major contribution of this paper is the identification of SPP1+ TGAMs as a macrophage population linking chronic inflammation, extracellular matrix remodeling, fibrosis, osteoclast differentiation, and tophus-associated joint damage.
+
+The authors' model can be interpreted as follows:
 
 ```text
-persistent hyperuricaemia
+intercritical gout
     |
-MSU crystal deposition in joints
+macrophage and stromal inflammatory programs
     |
-local tophus microenvironment formation
+tophus formation
     |
-expansion of SPP1+ TGAMs
+SPP1+ / MMP9+ / CHI3L1+ TGAM expansion
     |
-SPP1-CD44 signaling activation
+SPP1-CD44 and integrin-mediated immune-stromal communication
     |
-crosstalk with fibroblasts, osteoblast-lineage cells,
-osteoclast-lineage cells, and regulatory T cells
+fibroblast and osteoblast ECM-regulatory programs
     |
-ECM remodeling, fibrosis, and osteoclast differentiation
-    |
-tophus maturation and joint damage
+fibrosis, osteoclast differentiation, bone erosion, and joint damage
 ```
 
-This model integrates systemic urate dysregulation, local crystal deposition, macrophage state transition, intercellular communication, and spatial tissue remodeling into a single pathological sequence.
+A key strength of the study is that it connects cell-state discovery with spatial architecture. The corona zone appears to be an active immune-stromal communication region enriched for SPP1 signalling, while the fibrovascular zone is more closely associated with collagen signalling and structural remodeling. This spatial division helps explain why the tophus behaves as an organised granuloma-like lesion rather than a simple crystal deposit.
 
-## 9. Interpretation
+Another important point is that SPP1+ TGAMs may have dual functions. They retain inflammatory features, but they also acquire matrix-remodeling and fibroblast-like properties. This dual phenotype makes them a plausible cellular bridge between chronic inflammation and structural tissue damage.
 
-The value of this framework is not limited to the discovery of a marker-defined macrophage cluster. More importantly, it redefines the gouty tophus as a chronic spatial microenvironment constructed by immune cells, stromal cells, bone-lineage cells, and extracellular matrix.
+## Limitations
 
-Compared with the linear **MSU-NLRP3-IL-1 beta** model of acute gout, chronic gouty tophus formation is better understood as a tissue-ecology process. From a single-cell perspective, SPP1+ TGAMs provide a disease-associated macrophage state. From a spatial perspective, the separation between the corona zone and fibrovascular zone explains how the lesion acquires structural stability. From a mechanistic perspective, the SPP1-CD44 axis may connect chronic inflammation with extracellular matrix remodeling.
+The authors also acknowledge several limitations. First, the spatial resolution of the 10x Visium platform is limited, so each spot may contain multiple cells. This restricts the precision of cell-cell interaction inference and the identification of rare transitional cell states. Second, the number and diversity of tissue samples are limited, which is understandable given the difficulty of obtaining human tophus and synovial tissues but still affects generalisability. Third, computational trajectory and communication analyses require further experimental validation. Lineage tracing, co-culture experiments, and perturbation assays would be valuable for testing whether TGAMs directly drive fibroblast activation, osteoclast differentiation, or matrix remodeling.
 
-## 10. Open Questions
+## My Extension: How to Further Strengthen the Mechanistic Model
 
-1. Are SPP1+ TGAMs drivers of tophus formation, or are they consequences of a mature tophus microenvironment?
-2. Does the SPP1-CD44 axis represent a therapeutically actionable pathway?
-3. Is the SPP1+ TGAM-associated niche reversible after effective urate-lowering therapy?
-4. Does a similar macrophage-stromal remodeling axis exist in other crystal-associated or chronic inflammatory joint diseases?
-5. How can GWAS-defined systemic urate-regulatory genes be connected to local cell-state transitions in joint tissues?
+To further strengthen the evidence supporting this article's mechanistic model, future work could add evidence from three complementary levels.
 
-## Summary
+First, at the genetic level, GWAS could be used to identify genetic risk signals associated with gout, tophus formation, or severe joint damage. This would help connect the local cellular findings with inherited disease susceptibility.
 
-The main conceptual trajectory is that gout research is moving from systemic urate metabolism and acute inflammatory cascades toward local tissue microenvironments and spatial disease niches. MSU crystals initiate acute inflammation, but chronic tophus formation requires a broader framework that includes SPP1+ TGAMs, SPP1-CD44 communication, extracellular matrix remodeling, and spatially organized tissue structure.
+Second, at the cellular level, methods such as **scPagwas** could map GWAS signals onto single-cell subpopulations. This would help determine whether genetic risk is preferentially carried by SPP1+ TGAMs, TGAFs, Tregs, osteoblast-lineage cells, or other disease-associated cell states. Such analysis would move the interpretation from marker-based cell annotation toward genetically informed prioritisation of pathogenic cell types.
 
-In this view, gouty tophus formation should not be understood simply as the endpoint of urate crystal deposition. It is a chronic tissue-remodeling process jointly shaped by crystals, immune cells, stromal cells, bone-lineage cells, and extracellular matrix.
+Third, at the spatial level, tools such as **gsMap** could be used to project genetic risk signals into spatial domains of the tophus. This would help determine whether risk signals are enriched in the corona zone, the fibrovascular zone, or other local microenvironments. If SPP1+ TGAM-associated genetic signals localise to the corona zone while collagen-remodeling signals localise to the fibrovascular zone, the spatial model proposed by the authors would become more compelling.
+
+In addition, scATAC-seq or single-cell multiome profiling could add a regulatory layer. These approaches could identify the chromatin accessibility programs, transcription factors, and enhancer landscapes that drive SPP1+ TGAM formation. This would help explain why macrophages in the tophus acquire this specific SPP1+ / MMP9+ / CHI3L1+ state, rather than only describing the state after it has already formed.
+
+Together, genetic mapping, single-cell genetic prioritisation, spatial localisation, and epigenomic regulation could support the authors' model from genetic, cellular, spatial, and regulatory perspectives.
+
+## Take-Home Message
+
+This paper reframes tophaceous gout as a spatially organised immune-stromal remodeling disease. The key finding is that SPP1+ TGAMs are enriched in tophi and may coordinate macrophage-fibroblast-osteoblast communication through SPP1-CD44 and related ECM-remodeling pathways. By integrating single-cell transcriptomics, spatial transcriptomics, validation experiments, and causal inference, the study provides a mechanistic framework linking chronic inflammation to fibrosis, osteoclast differentiation, tophus maturation, and joint damage in gout.
