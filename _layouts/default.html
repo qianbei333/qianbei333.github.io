@@ -13,7 +13,16 @@
       <nav>
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
-        <a href="{{ '/resources/' | relative_url }}">Resources</a>
+        <div class="nav-dropdown">
+          <a class="nav-dropdown-toggle" href="{{ '/resources/' | relative_url }}">Resources</a>
+          <div class="nav-dropdown-menu">
+            <a href="https://my.csu.edu.cn/" target="_blank" rel="noopener">CSU Portal</a>
+            <a href="https://mail.csu.edu.cn/" target="_blank" rel="noopener">CSU Mail</a>
+            <a href="https://lib.csu.edu.cn/" target="_blank" rel="noopener">CSU Library</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>
+            <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+        </div>
       </nav>
     </header>
 
