@@ -77,6 +77,12 @@ nav a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 0;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  cursor: default;
+  font: inherit;
 }
 
 .nav-dropdown-toggle::after {
