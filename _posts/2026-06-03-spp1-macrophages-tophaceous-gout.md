@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SPP1+ Macrophages in the Gouty Tophus Microenvironment: From Acute Inflammation to Spatial Tissue Remodeling"
+title: "Deconstruction of Tophi and Synovium Defines SPP1+ Macrophages Involved in Extracellular Matrix Remodelling in Gout"
 date: 2026-06-03 15:00:00 +0800
 categories: gout single-cell spatial-transcriptomics macrophage
 ---
