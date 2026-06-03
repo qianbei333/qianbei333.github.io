@@ -6,11 +6,11 @@ permalink: /about/
 
 # About
 
-这里写你的个人介绍。
+Write your personal introduction here.
 
-可以包括：
+You can include:
 
-- 研究方向
-- 技术栈
-- 正在做的项目
-- 联系方式
+- Research interests
+- Technical stack
+- Current projects
+- Contact information

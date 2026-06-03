@@ -5,8 +5,8 @@ title: Home
 
 <section class="hero">
   <p class="eyebrow">Personal Blog</p>
-  <h1>记录研究、技术和日常思考。</h1>
-  <p class="lead">这里可以放论文笔记、项目记录、代码经验和个人文章。</p>
+  <h1>Research notes, technical writing, and personal reflections.</h1>
+  <p class="lead">A place for paper notes, project records, coding experience, and essays.</p>
 </section>
 
 <section class="post-list">

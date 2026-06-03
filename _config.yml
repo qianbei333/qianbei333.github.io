@@ -1,12 +1,12 @@
-title: "qianbei333's Blog"
+title: "Liu Zhi's Blog"
 description: "Notes, research, and projects."
 url: "https://qianbei333.github.io"
 baseurl: ""
-lang: "zh-CN"
+lang: "en"
 timezone: "Asia/Shanghai"
 
 author:
-  name: "qianbei333"
+  name: "Liu Zhi"
 
 permalink: /:year/:month/:day/:title/
 
