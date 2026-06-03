@@ -120,6 +120,37 @@ h2 {
   color: var(--muted);
 }
 
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.link-card {
+  display: grid;
+  gap: 6px;
+  min-height: 104px;
+  padding: 20px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.link-card:hover {
+  border-color: var(--accent);
+}
+
+.link-card span {
+  font-weight: 700;
+}
+
+.link-card small {
+  color: var(--muted);
+}
+
 .post {
   max-width: 760px;
 }
